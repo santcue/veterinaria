@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: auth-service
+  r2dbc:
+    url: r2dbc:mysql://localhost:3306/veterinaria_db
+    username: vet_user
+    password: vet_password
+
+server:
+  port: 8091
+
+jwt:
+  secret: veterinaria-secret-key-2024-muy-segura-y-larga-para-jwt-tokens
+  expiration: 86400000 # 24 horas
+
+logging:
+  level:
+    co.edu.veterinaria: DEBUG
+    org.springframework.security: DEBUG
+
