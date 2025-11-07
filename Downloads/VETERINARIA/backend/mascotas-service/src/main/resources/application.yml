@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: mascotas-service
+  r2dbc:
+    url: r2dbc:mysql://localhost:3306/veterinaria_db
+    username: vet_user
+    password: vet_password
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin123
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/auth/realms/veterinaria
+
+server:
+  port: 8081
+
+logging:
+  level:
+    co.edu.veterinaria: DEBUG
+    org.springframework.r2dbc: DEBUG
+    io.r2dbc: DEBUG
+
